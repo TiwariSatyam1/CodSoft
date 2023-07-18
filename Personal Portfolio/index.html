@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <div id="header">
+     <div class="container">
+        <nav>
+            <h1 class="logo">Satyam</h1>
+            <ul>
+               <li><a href="#">Home</a></li>
+               <li><a href="#">About</a></li>
+               <li><a href="#">Portfolio</a></li>
+               <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm Satyam Tiwari <br> from India </h1>
+        </div>
+     </div>
+ </div>
+ <div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="imf22.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>I am an enthusiastic, self motivated, reliable, responsible and hard working person. I am a 
+                    responsibleand hardworking person.Mature team worker and adaptable to all challenging situation. Able to work well both in team environment as well as using own initiative. I am able to work well under pressure and adhere to strict deadlines.   
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Developer</span><br>Designing Web Pages</li>
+                        <li><span>Java</span><br></li>
+                        <li><span>Artificial Intelligence & Machine learning</span><br></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Web Developer Intern</span><br>At CodSoft</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2025</span><br>B.Tech from Deen Dayal Upadhyaya Gorakhpur University</li>
+                        <li><span>2020</span><br>Intermediate from St Xavier's Public School</li>
+                        <li><span>2018</span><br>Class 10 from H.P. Children's Academy</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+ <!-- --------------------------end of About section--------------------------------- -->
+<div id="Project-Section">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="projectlist">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Soduku Solver</h2>
+                <p>This project is a Sudoku generator and solver implemented in Java. It consists of two main components: a Sudoku board generator and a solver. The generator randomly generates valid Sudoku boards of varying difficulties, while the solver uses backtracking and other techniques to find a solution to a given Sudoku board.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Web Projects</h2>
+                <p>Created landing Page, Personal Portfolio & Calculator using the knowledge of Html, CSS & JavaScript</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------Resume Section---------------------------- -->
+<div id="Resume-Section">
+    <div class="container" style="font-size: 35px;">
+        <h1 class="subtitle">Resume</h1>
+        <a href="Res1.pdf" download='Resume' class ="download-btn">Download
+         <i class="fa fa-download"></i>
+        </a>
+    </div>
+</div>
+<!-- --------------------------Contact-------------------------- -->
+<div id="Contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>Satyamtiwarigkp@gmail.com</p>
+                <p>9198530867</p>
+                <div class="social-icons">
+                    <a href=""><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    &copy;No copyright claim.
+</footer>
+
+ <script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tablcontent of tabcontents){
+            tablcontent.classList.remove("active-tab");
+        }
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+ </script>
+</body>
+</html>
